@@ -13,9 +13,4 @@ user_body = {
 
 products_ids = {
     "ids": [1, 2, 3]
-} 
-
-kit_body = {
-       "cardId": 1,
-       "name": "Мой набор"
-   }
+}
