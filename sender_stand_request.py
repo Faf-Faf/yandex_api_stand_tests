@@ -9,14 +9,14 @@ def post_new_user(body):
                          json=body,
                          headers=data.headers)
 
-response = post_new_user(data.user_body)
-
-def post_products_kits(data_products_ids):
-    return requests.post(configuration.URL_SERVICE + configuration.PRODUCTS_KITS_PATH,
-                         json=data_products_ids,
+def post_new_kit(body):
+    return requests.post(configuration.URL_SERVICE + configuration.CREATE_KIT_PATH,
+                         json=body,
                          headers=data.headers)
 
-response_kits = post_products_kits(data.products_ids)
-
-print(response_kits.status_code)
-print(response_kits.json())
+def get_kits_by_card_id(card_id):
+    return requests.get(
+        configuration.URL_SERVICE + configuration.CREATE_KIT_PATH,
+        params={"cardId": card_id},
+        headers=data.headers
+    )
